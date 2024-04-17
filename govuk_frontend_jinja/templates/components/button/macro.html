@@ -12,7 +12,7 @@
 
 {#- Determine type of element to use, if not explicitly set #}
 {%- if params.element %}
-  {% set element = params.element | lower %}
+  {% set element = params.element %}
 {% else %}
   {% if params.href %}
     {% set element = 'a' %}
