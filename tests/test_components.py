@@ -74,10 +74,18 @@ REGEX_REPLACERS = [
     (r"\n", ""),
 ]
 
+STRING_REPLACERS = [
+    ('value="False"', 'value="false"'),
+    ('attribute="True"', 'attribute="true"'),
+]
+
 
 def html_to_one_line(html: str):
     for replacer in REGEX_REPLACERS:
         html = re.sub(*replacer, html)
+
+    for replacer in STRING_REPLACERS:
+        html = html.replace(*replacer)
 
     return html
 
