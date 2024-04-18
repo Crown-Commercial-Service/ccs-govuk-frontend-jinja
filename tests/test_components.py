@@ -65,14 +65,9 @@ def component_fixture(fixtures, component_name, fixture_name):
 
 
 def html_to_one_line(html: str):
-    replacers = [
-        ("\n", ""),
-        (" ", ""),
-        ("&#34;", "&quot;"),
-        ("\\", "&#92;"),
-        ('value="False"', 'value="false"'),
-        ('attribute="True"', 'attribute="true"'),
-    ]
+    replacers = [("\n", ""), (" ", ""), ("&#34;", "&quot;"), ("\\", "&#92;")]
+
+    html = html.strip()
 
     for replacer in replacers:
         html = html.replace(*replacer)
