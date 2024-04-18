@@ -5,6 +5,6 @@
   "author": "Matt Shaw",
   "license": "MIT",
   "devDependencies": {
-    "govuk-frontend": "^5.1.0"
+    "govuk-frontend": "^5.2.0"
   }
 }
