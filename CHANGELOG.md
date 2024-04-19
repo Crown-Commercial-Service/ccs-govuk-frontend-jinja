@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Added
 
+- [GOV.UK Frontend v5.3.1](https://github.com/alphagov/govuk-frontend/releases/tag/v5.3.1) support
 - [GOV.UK Frontend v5.3.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.3.0) support
 - [Password input component](https://design-system.service.gov.uk/components/password-input/)
 - [GOV.UK Frontend v5.2.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.2.0) support
