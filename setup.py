@@ -1,10 +1,19 @@
+import re
+import ast
 import glob
 import os
 
 import setuptools
 
+
+_version_re = re.compile(r"__version__\s+=\s+(.*)")
+
+with open("digitalmarketplace_frontend_jinja/__init__.py", "rb") as f:
+    version = str(ast.literal_eval(_version_re.search(f.read().decode("utf-8")).group(1)))
+
 with open("README.md", "r") as fh:
     long_description = fh.read()
+
 
 components = []
 directories = glob.glob("govuk_frontend_jinja/**/**/*.html", recursive=True)
@@ -12,14 +21,13 @@ for directory in directories:
     components.append(os.path.relpath(os.path.dirname(directory), "govuk_frontend_jinja") + "/*.html")
 
 setuptools.setup(
-    name="govuk-frontend-jinja",
-    version="3.0.0",
-    author="Matt Shaw",
-    author_email="matthew.shaw@landregistry.gov.uk",
+    name="ccs-govuk-frontend-jinja",
+    version=version,
+    author="CCS",
     description="GOV.UK Frontend Jinja Macros",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/LandRegistry/govuk-frontend-jinja",
+    url="https://github.com/tim-s-ccs/govuk-frontend-jinja",
     packages=setuptools.find_packages(exclude=["tests"]),
     package_data={"govuk_frontend_jinja": components},
     classifiers=[
