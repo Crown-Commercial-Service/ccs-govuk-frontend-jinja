@@ -17,6 +17,7 @@ The following table shows the version of CCS GOV.UK Frontend Jinja that you shou
 
 | CCS GOV.UK Frontend Jinja Version | Target GOV.UK Frontend Version |
 | ----------------------------- | ------------------------------ |
+| [1.1.0](https://github.com/tim-s-ccs/ccs-govuk-frontend-jinja/releases/tag/1.1.0) | [5.3.1](https://github.com/alphagov/govuk-frontend/releases/tag/v5.4.0) |
 | [1.0.0](https://github.com/tim-s-ccs/ccs-govuk-frontend-jinja/releases/tag/1.0.0) | [5.3.1](https://github.com/alphagov/govuk-frontend/releases/tag/v5.3.1) |
 
 Any other versions of GOV.UK Frontend not shown above _may_ still be compatible, but have not been specifically tested and verified.
