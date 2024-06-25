@@ -46,7 +46,7 @@ tomli==2.0.1
     # via pytest
 werkzeug==3.0.1
     # via flask
-xmldiff==2.6.3
+xmldiff==2.7.0
     # via -r requirements-test.in
 zipp==3.18.1
     # via importlib-metadata
