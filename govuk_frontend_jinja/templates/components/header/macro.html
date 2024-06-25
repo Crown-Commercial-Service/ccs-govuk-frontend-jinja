@@ -19,7 +19,7 @@
 </svg>
 {% endset %}
 
-{% set _tudorCrown %}
+{%- set _tudorCrown %}
 <svg
   focusable="false"
   role="img"
@@ -81,7 +81,7 @@
             <a class="govuk-header__link" href="{{ item.href }}"
               {{- govukAttributes(item.attributes) -}}>
             {% endif %}
-              {{ item.html | safe if item.html else item.text }}
+              {{ item.html | safe | trim | indent(14) if item.html else item.text }}
             {% if item.href %}
             </a>
             {% endif %}

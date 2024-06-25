@@ -1,15 +1,15 @@
 {% macro govukBreadcrumbs(params) %}
 {% from "govuk_frontend_jinja/macros/attributes.html" import govukAttributes %}
 
-{# Set classes for this component #}
+{#- Set classes for this component #}
 {%- set classNames = "govuk-breadcrumbs" -%}
 
 {% if params.classes %}
-  {% set classNames = classNames + " " + params.classes %}
+  {% set classNames = classNames ~ " " ~ params.classes %}
 {% endif -%}
 
 {% if params.collapseOnMobile %}
-  {% set classNames = classNames + " govuk-breadcrumbs--collapse-on-mobile" %}
+  {% set classNames = classNames ~ " govuk-breadcrumbs--collapse-on-mobile" %}
 {% endif -%}
 
 <div class="{{ classNames }}" {{- govukAttributes(params.attributes) }}>

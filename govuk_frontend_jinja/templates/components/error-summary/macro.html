@@ -1,5 +1,5 @@
 {% macro govukErrorSummary(params) %}
-{% from "govuk_frontend_jinja/macros/attributes.html" import govukAttributes %}
+{% from "govuk_frontend_jinja/macros/attributes.html" import govukAttributes -%}
 
 <div class="govuk-error-summary
   {%- if params.classes %} {{ params.classes }}{% endif %}"

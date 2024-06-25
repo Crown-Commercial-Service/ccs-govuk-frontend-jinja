@@ -1,5 +1,5 @@
 {% macro govukFooter(params) %}
-{% from "govuk_frontend_jinja/macros/attributes.html" import govukAttributes %}
+{% from "govuk_frontend_jinja/macros/attributes.html" import govukAttributes -%}
 
 <footer class="govuk-footer {%- if params.classes %} {{ params.classes }}{% endif %}"
   {{- govukAttributes(params.attributes) }}>
@@ -47,13 +47,13 @@
         {% endif %}
         {% if params.meta.text or params.meta.html %}
         <div class="govuk-footer__meta-custom">
-          {{ params.meta.html | safe if params.meta.html else params.meta.text }}
+          {{ params.meta.html | safe | trim | indent(10) if params.meta.html else params.meta.text }}
         </div>
         {% endif %}
         {% endif %}
         {# The SVG needs `focusable="false"` so that Internet Explorer does not
           treat it as an interactive element - without this it will be
-          'focusable' when using the keyboard to navigate. #}
+          'focusable' when using the keyboard to navigate. -#}
         <svg
           aria-hidden="true"
           focusable="false"

@@ -1,5 +1,5 @@
 {% macro govukHint(params) %}
-{% from "govuk_frontend_jinja/macros/attributes.html" import govukAttributes %}
+{% from "govuk_frontend_jinja/macros/attributes.html" import govukAttributes -%}
 
 <div {%- if params.id %} id="{{ params.id }}"{% endif %} class="govuk-hint {%- if params.classes %} {{ params.classes }}{% endif %}"
   {{- govukAttributes(params.attributes) }}>

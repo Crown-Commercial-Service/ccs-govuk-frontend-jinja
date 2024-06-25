@@ -1,7 +1,7 @@
 # CCS GOV.UK Frontend Jinja Macros
 
 [![PyPI version](https://badge.fury.io/py/ccs-govuk-frontend-jinja.svg)](https://pypi.org/project/ccs-govuk-frontend-jinja/)
-![govuk-frontend 5.3.1](https://img.shields.io/badge/govuk--frontend%20version-5.3.1-005EA5?logo=gov.uk&style=flat)
+![govuk-frontend 5.4.0](https://img.shields.io/badge/govuk--frontend%20version-5.4.0-005EA5?logo=gov.uk&style=flat)
 [![Python package](https://github.com/tim-s-ccs/ccs-govuk-frontend-jinja/actions/workflows/python-package.yml/badge.svg)](https://github.com/tim-s-ccs/ccs-govuk-frontend-jinja/actions/workflows/python-package.yml)
 
 **This is a fork of [GOV.UK Frontend Jinja Macros](https://github.com/LandRegistry/govuk-frontend-jinja) which has not been updated beyond GOV.UK Frontend v5.1. This is for use in the Digital Marketplace until it starts to get updated again.**
@@ -17,7 +17,8 @@ The following table shows the version of CCS GOV.UK Frontend Jinja that you shou
 
 | CCS GOV.UK Frontend Jinja Version | Target GOV.UK Frontend Version |
 | ----------------------------- | ------------------------------ |
-| [1.1.0](https://github.com/tim-s-ccs/ccs-govuk-frontend-jinja/releases/tag/1.1.0) | [5.3.1](https://github.com/alphagov/govuk-frontend/releases/tag/v5.4.0) |
+| [1.2.0](https://github.com/tim-s-ccs/ccs-govuk-frontend-jinja/releases/tag/1.2.0) | [5.4.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.4.0) |
+| [1.1.0](https://github.com/tim-s-ccs/ccs-govuk-frontend-jinja/releases/tag/1.1.0) | [5.4.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.4.0) |
 | [1.0.0](https://github.com/tim-s-ccs/ccs-govuk-frontend-jinja/releases/tag/1.0.0) | [5.3.1](https://github.com/alphagov/govuk-frontend/releases/tag/v5.3.1) |
 
 Any other versions of GOV.UK Frontend not shown above _may_ still be compatible, but have not been specifically tested and verified.

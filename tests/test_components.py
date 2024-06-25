@@ -80,6 +80,8 @@ STRING_REPLACERS = [
     ("inputclass", "input class"),
     ('spellcheck="True"', 'spellcheck="true"'),
     ('spellcheck="False"', 'spellcheck="false"'),
+    ("hiddendata", "hidden data"),
+    ("selecteddata", "selected data"),
 ]
 
 
