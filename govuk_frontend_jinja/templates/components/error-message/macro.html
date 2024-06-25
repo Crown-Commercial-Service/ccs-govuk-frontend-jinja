@@ -1,5 +1,5 @@
 {% macro govukErrorMessage(params) %}
-{% from "govuk_frontend_jinja/macros/attributes.html" import govukAttributes %}
+{% from "govuk_frontend_jinja/macros/attributes.html" import govukAttributes -%}
 
 {% set visuallyHiddenText = params.visuallyHiddenText | default("Error") -%}
 {% set errorMessageText = params.html | safe | trim | indent(2) if params.html else params.text -%}

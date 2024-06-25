@@ -1,5 +1,5 @@
 {% macro govukFieldset(params) %}
-{% from "govuk_frontend_jinja/macros/attributes.html" import govukAttributes %}
+{% from "govuk_frontend_jinja/macros/attributes.html" import govukAttributes -%}
 
 <fieldset class="govuk-fieldset
   {%- if params.classes %} {{ params.classes }}{% endif %}"

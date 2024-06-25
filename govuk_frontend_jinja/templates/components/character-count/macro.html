@@ -11,17 +11,17 @@
 #}
 {%- set hasNoLimit = (not params.maxwords and not params.maxlength) -%}
 {%- set textareaDescriptionLength = params.maxwords or params.maxlength -%}
-{%- set textareaDescriptionText = params.textareaDescriptionText or 'You can enter up to %{count} ' + ('words' if params.maxwords else 'characters') -%}
+{%- set textareaDescriptionText = params.textareaDescriptionText or 'You can enter up to %{count} ' ~ ('words' if params.maxwords else 'characters') -%}
 {%- set textareaDescriptionTextNoLimit = textareaDescriptionText | replace('%{count}', textareaDescriptionLength) if not hasNoLimit -%}
 
 {%- set countMessageHtml %}
 {{ govukHint({
-  "text": textareaDescriptionTextNoLimit,
-  "id": params.id + '-info',
-  "classes": 'govuk-character-count__message' + (' ' + params.countMessage.classes if params.countMessage and params.countMessage.classes else '')
+  'text': textareaDescriptionTextNoLimit,
+  'id': params.id ~ '-info',
+  'classes': 'govuk-character-count__message' ~ (' ' ~ params.countMessage.classes if params.countMessage and params.countMessage.classes)
 }) | trim }}
 {% if params.formGroup and params.formGroup.afterInput %}
-  {{- params.formGroup.afterInput.html | safe | trim if params.formGroup.afterInput.html else params.formGroup.afterInput.text }}
+  {{- params.formGroup.afterInput.html | safe | trim if params.formGroup and params.formGroup.afterInput.html else params.formGroup.afterInput.text }}
 {% endif -%}
 {% endset -%}
 
@@ -29,16 +29,16 @@
   {{- govukAttributes({
     "data-module": "govuk-character-count",
     "data-maxlength": {
-      "value": params.maxlength,
-      "optional": true
+      'value': params.maxlength,
+      'optional': true
     },
     "data-threshold": {
-      "value": params.threshold,
-      "optional": true
+      'value': params.threshold,
+      'optional': true
     },
     "data-maxwords": {
-      "value": params.maxwords,
-      "optional": true
+      'value': params.maxwords,
+      'optional': true
     }
   }) -}}
 
@@ -87,28 +87,28 @@
 {% endset -%}
 
 {#- Append form group attributes onto attributes set above #}
-{%- if params.formGroup %}
-  {%- for name, value in (params.formGroup.attributes if params.formGroup and params.formGroup.attributes else {}).items() %}
-    {% set attributesHtml = '{} {}="{}"'.format(attributesHtml, name | escape, options.value | escape) %}
+{%- if params.formGroup -%}
+  {%- for name, value in params.formGroup.attributes if params.formGroup %}
+    {% set attributesHtml = attributesHtml ~ " " ~ name | escape ~ '="' ~ value | escape ~ '"' %}
   {% endfor -%}
-{% endif -%}
+{%- endif -%}
 
 {{ govukTextarea({
   'id': params.id,
   'name': params.name,
-  'describedBy': params.id + '-info',
+  'describedBy': params.id ~ '-info',
   'rows': params.rows,
   'spellcheck': params.spellcheck,
   'value': params.value,
   'formGroup': {
-    'classes': 'govuk-character-count' + (' ' + params.formGroup.classes if params.formGroup and params.formGroup.classes else ''),
+    'classes': 'govuk-character-count' ~ (' ' ~ params.formGroup.classes if params.formGroup and params.formGroup.classes),
     'attributes': attributesHtml,
-    'beforeInput': params.formGroup.beforeInput if params.formGroup else null,
+    'beforeInput': params.formGroup.beforeInput if params.fromGroup,
     'afterInput': {
       'html': countMessageHtml
     }
   },
-  'classes': 'govuk-js-character-count' + (' ' + params.classes if params.classes else ''),
+  'classes': 'govuk-js-character-count' ~ (' ' ~ params.classes if params.classes),
   'label': {
     'html': params.label.html,
     'text': params.label.text,

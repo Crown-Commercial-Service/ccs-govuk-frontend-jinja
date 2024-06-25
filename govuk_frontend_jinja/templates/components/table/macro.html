@@ -1,5 +1,5 @@
 {% macro govukTable(params) %}
-{% from "govuk_frontend_jinja/macros/attributes.html" import govukAttributes %}
+{% from "govuk_frontend_jinja/macros/attributes.html" import govukAttributes -%}
 
 <table class="govuk-table
   {%- if params.classes %} {{ params.classes }}{% endif %}"

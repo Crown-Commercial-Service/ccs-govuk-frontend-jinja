@@ -1,5 +1,5 @@
 {% macro govukPagination(params) %}
-{% from "govuk_frontend_jinja/macros/attributes.html" import govukAttributes %}
+{% from "govuk_frontend_jinja/macros/attributes.html" import govukAttributes -%}
 
 {% set blockLevel = 'items' not in params and (params.next or params.previous) -%}
 
@@ -66,7 +66,7 @@
     {% endcall %}
   {%- endif %}
 
-  {%- if 'items' in params -%}
+  {%- if 'items' in params %}
   <ul class="govuk-pagination__list">
   {% for item in params['items'] %}
     {{ _pageItem(item) | indent(2) }}

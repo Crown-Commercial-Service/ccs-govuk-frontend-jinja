@@ -1,20 +1,20 @@
 {% macro govukButton(params) %}
 {% from "govuk_frontend_jinja/macros/attributes.html" import govukAttributes %}
 
-{# Set classes for this component #}
+{#- Set classes for this component #}
 {%- set classNames = "govuk-button" -%}
 
 {%- if params.classes %}
-  {% set classNames = classNames + " " + params.classes %}
+  {% set classNames = classNames ~ " " ~ params.classes %}
 {% endif %}
 
 {%- if params.isStartButton %}
-  {% set classNames = classNames + " govuk-button--start" %}
+  {% set classNames = classNames ~ " govuk-button--start" %}
 {% endif %}
 
 {#- Determine type of element to use, if not explicitly set #}
 {%- if params.element %}
-  {% set element = params.element %}
+  {% set element = params.element | lower %}
 {% else %}
   {% if params.href %}
     {% set element = 'a' %}

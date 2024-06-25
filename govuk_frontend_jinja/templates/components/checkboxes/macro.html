@@ -24,17 +24,17 @@
 {%- macro _checkboxItem(params, item, index) %}
   {#- If the user explicitly sets an id, use this instead of the regular idPrefix -#}
   {#- The first id should not have a number suffix so it's easy to link to from the error summary component -#}
-  {% set itemId = item.id if item.id else idPrefix + ("-" ~ index if index > 1 else "") %}
+  {% set itemId = item.id if item.id else idPrefix ~ ("-" ~ index if index > 1 else "") %}
   {% set itemName = item.name if item.name else params.name %}
-  {% set conditionalId = "conditional-" + itemId %}
+  {% set conditionalId = "conditional-" ~ itemId %}
   {%- if item.divider %}
     <div class="govuk-checkboxes__divider">{{ item.divider }}</div>
   {% else %}
-    {% set isChecked = item.checked | default((item.value in params.get('values', []) and item.checked != false) if params.values else false, true) %}
+    {% set isChecked = item.checked | default((item.value in params.get('values', []) and item.checked is not false) if params.values else false, true) %}
     {% set hasHint = true if item.hint and (item.hint.text or item.hint.html) %}
-    {% set itemHintId = itemId + "-item-hint" if hasHint else "" %}
+    {% set itemHintId = itemId ~ "-item-hint" if hasHint else "" %}
     {% set itemDescribedBy = ns.describedBy if not hasFieldset else "" %}
-    {% set itemDescribedBy = (itemDescribedBy + " " + itemHintId) | trim %}
+    {% set itemDescribedBy = (itemDescribedBy ~ " " ~ itemHintId) | trim %}
     <div class="govuk-checkboxes__item">
       <input class="govuk-checkboxes__input" id="{{ itemId }}" name="{{ itemName }}" type="checkbox" value="{{ item.value }}"
         {{-" checked" if isChecked }}
@@ -46,15 +46,15 @@
       {{ govukLabel({
         'html': item.html,
         'text': item.text,
-        'classes': 'govuk-checkboxes__label' + (' ' + item.label.classes if item.label and item.label.classes else ''),
+        'classes': 'govuk-checkboxes__label' ~ (' ' ~ item.label.classes if item.label and item.label.classes else ""),
         'attributes': item.label.attributes if item.label,
         'for': itemId
       }) | trim | indent(6) }}
       {% if hasHint %}
       {{ govukHint({
         'id': itemHintId,
-        'classes': 'govuk-checkboxes__hint' + (' ' + item.hint.classes if item.hint.classes else ''),
-        'attributes': item.hint.attributes,
+        'classes': 'govuk-checkboxes__hint' ~ (' ' ~ item.hint.classes if item.hint and item.hint.classes else ""),
+        'attributes': item.hint.attributes if item.hint,
         'html': item.hint.html,
         'text': item.hint.text
       }) | trim | indent(6) }}
@@ -71,8 +71,8 @@
 {#- Capture the HTML so we can optionally nest it in a fieldset -#}
 {% set innerHtml %}
 {% if params.hint %}
-  {% set hintId = idPrefix + '-hint' %}
-  {% set ns.describedBy = ns.describedBy + ' ' + hintId if ns.describedBy else hintId %}
+  {% set hintId = idPrefix ~ '-hint' %}
+  {% set ns.describedBy = ns.describedBy ~ ' ' ~ hintId if ns.describedBy else hintId %}
   {{ govukHint({
     'id': hintId,
     'classes': params.hint.classes,
@@ -82,8 +82,8 @@
   }) | trim | indent(2) }}
 {% endif %}
 {% if params.errorMessage %}
-  {% set errorId = idPrefix + '-error' %}
-  {% set ns.describedBy = ns.describedBy + ' ' + errorId if ns.describedBy else errorId %}
+  {% set errorId = idPrefix ~ '-error' %}
+  {% set ns.describedBy = ns.describedBy ~ ' ' ~ errorId if ns.describedBy else errorId %}
   {{ govukErrorMessage({
     'id': errorId,
     'classes': params.errorMessage.classes,
@@ -96,7 +96,7 @@
   <div class="govuk-checkboxes {%- if params.classes %} {{ params.classes }}{% endif %}"
     {{- govukAttributes(params.attributes) }} data-module="govuk-checkboxes">
     {% if params.formGroup and params.formGroup.beforeInputs %}
-    {{ params.formGroup.beforeInputs.html | safe | trim | indent(4) if params.formGroup.beforeInputs.html else params.formGroup.beforeInputs.text }}
+    {{ params.formGroup.beforeInputs.html | safe | trim | indent(4) if params.formGroup and params.formGroup.beforeInputs.html else params.formGroup.beforeInputs.text }}
     {% endif %}
     {% for item in params['items'] %}
       {% if item %}
@@ -104,13 +104,13 @@
       {% endif %}
     {% endfor %}
     {% if params.formGroup and params.formGroup.afterInputs %}
-    {{ params.formGroup.afterInputs.html | safe | trim | indent(4) if params.formGroup.afterInputs.html else params.formGroup.afterInputs.text }}
+    {{ params.formGroup.afterInputs.html | safe | trim | indent(4) if params.formGroup and params.formGroup.afterInputs.html else params.formGroup.afterInputs.text }}
     {% endif %}
   </div>
 {% endset -%}
 
 <div class="govuk-form-group {%- if params.errorMessage %} govuk-form-group--error{% endif %} {%- if params.formGroup and params.formGroup.classes %} {{ params.formGroup.classes }}{% endif %}"
-  {{- govukAttributes(params.formGroup.attributes if params.formGroup else {}) }}>
+  {{- govukAttributes(params.formGroup.attributes if params.formGroup) }}>
 {% if hasFieldset %}
   {{ govukFieldset({
     'describedBy': ns.describedBy,

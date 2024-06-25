@@ -8,7 +8,7 @@
   aria-describedby – for example hints or error messages -#}
 {% set describedBy = params.describedBy if params.describedBy else "" %}
 <div class="govuk-form-group {%- if params.errorMessage %} govuk-form-group--error{% endif %} {%- if params.formGroup and params.formGroup.classes %} {{ params.formGroup.classes }}{% endif %}"
-  {{- govukAttributes(params.formGroup.attributes if params.formGroup else {}) }}>
+  {{- govukAttributes(params.formGroup.attributes if params.formGroup) }}>
   {{ govukLabel({
     'html': params.label.html,
     'text': params.label.text,
@@ -18,8 +18,8 @@
     'for': params.id
   }) | trim | indent(2) }}
 {% if params.hint %}
-  {% set hintId = params.id + '-hint' %}
-  {% set describedBy = describedBy + ' ' + hintId if describedBy else hintId %}
+  {% set hintId = params.id ~ '-hint' %}
+  {% set describedBy = describedBy ~ ' ' ~ hintId if describedBy else hintId %}
   {{ govukHint({
     'id': hintId,
     'classes': params.hint.classes,
@@ -29,8 +29,8 @@
   }) | trim | indent(2) }}
 {% endif %}
 {% if params.errorMessage %}
-  {% set errorId = params.id + '-error' %}
-  {% set describedBy = describedBy + ' ' + errorId if describedBy else errorId %}
+  {% set errorId = params.id ~ '-error' %}
+  {% set describedBy = describedBy ~ ' ' ~ errorId if describedBy else errorId %}
   {{ govukErrorMessage({
     'id': errorId,
     'classes': params.errorMessage.classes,
@@ -41,16 +41,16 @@
   }) | trim | indent(2) }}
 {% endif %}
 {% if params.formGroup and params.formGroup.beforeInput %}
-  {{ params.formGroup.beforeInput.html | safe | trim | indent(2) if params.formGroup.beforeInput.html else params.formGroup.beforeInput.text }}
+  {{ params.formGroup.beforeInput.html | safe | trim | indent(2) if params.formGroup and params.formGroup.beforeInput.html else params.formGroup.beforeInput.text }}
 {% endif %}
   <textarea class="govuk-textarea {%- if params.errorMessage %} govuk-textarea--error{% endif %} {%- if params.classes %} {{ params.classes }}{% endif %}" id="{{ params.id }}" name="{{ params.name }}" rows="{{ params.rows | default(5, true) }}"
-  {%- if (params.spellcheck == false) or (params.spellcheck == true) %} spellcheck="{{ params.spellcheck | lower }}"{% endif %}
+  {%- if (params.spellcheck is false) or (params.spellcheck is true) %} spellcheck="{{ params.spellcheck | lower }}"{% endif %}
   {%- if params.disabled %} disabled{% endif %}
   {%- if describedBy %} aria-describedby="{{ describedBy }}"{% endif %}
   {%- if params.autocomplete %} autocomplete="{{ params.autocomplete }}"{% endif %}
   {{- govukAttributes(params.attributes) }}>{{ params.value }}</textarea>
 {% if params.formGroup and params.formGroup.afterInput %}
-  {{ params.formGroup.afterInput.html | safe | trim | indent(2) if params.formGroup.afterInput.html else params.formGroup.afterInput.text }}
+  {{ params.formGroup.afterInput.html | safe | trim | indent(2) if params.formGroup and params.formGroup.afterInput.html else params.formGroup.afterInput.text }}
 {% endif %}
 </div>
 {% endmacro %}
