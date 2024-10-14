@@ -82,6 +82,7 @@ STRING_REPLACERS = [
     ('spellcheck="False"', 'spellcheck="false"'),
     ("hiddendata", "hidden data"),
     ("selecteddata", "selected data"),
+    ("divclass", "div class"),
 ]
 
 
