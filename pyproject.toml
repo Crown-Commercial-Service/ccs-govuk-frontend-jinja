@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ccs-govuk-frontend-jinja"
+dynamic = ["version"]
+dependencies = [
+  'jinja2>=3.0.2',
+]
+requires-python = ">=3.10,<3.13"
+authors = [
+  {name = "HM Land Registry Developers"},
+  {name = "CCS Developers"},
+]
+description = "GOV.UK Frontend Jinja Macros"
+readme = "README.md"
+license = {file = "LICENSE"}
+
+[project.urls]
+Homepage = "https://github.com/tim-s-ccs/ccs-govuk-frontend-jinja"
+Repository = "https://github.com/tim-s-ccs/ccs-govuk-frontend-jinja.git"
+Issues = "https://github.com/tim-s-ccs/ccs-govuk-frontend-jinja/issues"
+Changelog = "https://github.com/tim-s-ccs/ccs-govuk-frontend-jinja/CHANGELOG.md"
+
+[tool.setuptools.dynamic]
+version = {attr = "govuk_frontend_jinja.__version__"}
+
+[tool.setuptools.packages.find]
+exclude = ["node_modules*"]

@@ -6,7 +6,7 @@ from dmdevtools.invoke_tasks import npm_install
 
 @task(ns["virtualenv"], ns["requirements_dev"])
 def test_mypy(c):
-    c.run("mypy app/")
+    c.run("mypy tests/utils/")
 
 
 ns.add_task(npm_install)

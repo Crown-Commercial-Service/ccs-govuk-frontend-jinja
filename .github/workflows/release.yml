@@ -28,7 +28,9 @@ jobs:
 
       - name: Get package version
         id: package_version
-        run: echo "python=$(python setup.py --version)" >> $GITHUB_OUTPUT
+        run: |
+          python -m pip install -e .
+          echo "python=$(python -c 'import importlib.metadata; print(importlib.metadata.version("ccs-govuk-frontend-jinja"))')" >> $GITHUB_OUTPUT
 
       - name: Check if version tag already exists
         id: version_tag
