@@ -16,7 +16,7 @@ def create_app():
                     "govuk_frontend_jinja": FileSystemLoader(
                         searchpath=os.path.join(
                             os.path.dirname(__file__),
-                            "../govuk_frontend_jinja/templates"
+                            "../../govuk_frontend_jinja/templates"
                         )
                     )
                 }

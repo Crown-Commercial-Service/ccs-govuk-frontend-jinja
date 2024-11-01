@@ -99,6 +99,11 @@ To make a new version:
 
 When the pull request is merged a GitHub Action will tag the new version.
 
+## Pre-commit hooks
+
+This project has a [pre-commit hook][pre-commit hook] to do some general file checks and check the `pyproject.toml`.
+Follow the [Quick start][pre-commit quick start] to see how to set this up in your local checkout of this project.
+
 ## Licence
 
 Unless stated otherwise, the codebase is released under [the MIT License][mit].
@@ -110,3 +115,6 @@ of the [Open Government 3.0][ogl] licence.
 [mit]: LICENCE
 [copyright]: http://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/
 [ogl]: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+
+[pre-commit hook]: https://pre-commit.com/
+[pre-commit quick start]: https://pre-commit.com/#quick-start
