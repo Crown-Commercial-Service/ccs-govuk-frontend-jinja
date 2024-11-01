@@ -4,7 +4,9 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased](https://github.com/tim-s-ccs/ccs-govuk-frontend-jinja/compare/1.3.0...main)
+## [Unreleased](https://github.com/tim-s-ccs/ccs-govuk-frontend-jinja/compare/1.4.0rc6...main)
+
+## [1.4.0rc6](https://github.com/tim-s-ccs/ccs-govuk-frontend-jinja/releases/tag/1.4.0rc6) - 01/11/2024
 
 ### Changed
 
