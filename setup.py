@@ -45,6 +45,6 @@ setuptools.setup(
         "Topic :: Software Development :: User Interfaces",
         "Topic :: Text Processing :: Markup :: HTML",
     ],
-    python_requires=">=3.8",
+    python_requires=">=3.10",
     install_requires=["jinja2!=3.0.0,!=3.0.1"],
 )

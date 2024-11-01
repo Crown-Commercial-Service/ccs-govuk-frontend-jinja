@@ -1,5 +1,8 @@
+-e file:.
+
 flake8
-flask
+mypy
 pytest
 lxml
 xmldiff
+flask
