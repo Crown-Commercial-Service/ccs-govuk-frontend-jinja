@@ -6,6 +6,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased](https://github.com/tim-s-ccs/ccs-govuk-frontend-jinja/compare/1.4.0...main)
 
+- Make Python 3.11 the minimum supported version
+- Add support for Python 3.13
+
 ## [1.4.0](https://github.com/tim-s-ccs/ccs-govuk-frontend-jinja/releases/tag/1.4.0) - 01/11/2024
 
 ### Changed
