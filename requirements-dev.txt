@@ -42,7 +42,7 @@ pycodestyle==2.12.1
     # via flake8
 pyflakes==3.2.0
     # via flake8
-pytest==8.3.3
+pytest==8.3.4
     # via ccs-govuk-frontend-jinja (pyproject.toml)
 typing-extensions==4.12.2
     # via mypy
