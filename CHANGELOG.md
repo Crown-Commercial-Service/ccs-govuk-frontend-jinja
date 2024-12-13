@@ -4,10 +4,15 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased](https://github.com/tim-s-ccs/ccs-govuk-frontend-jinja/compare/1.4.0...main)
+## [Unreleased](https://github.com/tim-s-ccs/ccs-govuk-frontend-jinja/compare/1.4.1...main)
+
+## [1.4.1](https://github.com/tim-s-ccs/ccs-govuk-frontend-jinja/releases/tag/1.4.1) - 13/12/2024
+
+### Added
 
 - Make Python 3.11 the minimum supported version
 - Add support for Python 3.13
+- Update the `pyproject.toml` to add dev dependancies
 
 ## [1.4.0](https://github.com/tim-s-ccs/ccs-govuk-frontend-jinja/releases/tag/1.4.0) - 01/11/2024
 
