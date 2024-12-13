@@ -6,6 +6,23 @@ updates:
     interval: weekly
     time: "03:00"
   open-pull-requests-limit: 10
+
+  # Group packages into shared PR
+  groups:
+    flask:
+      patterns:
+        - 'flask'
+        - 'Flask'
+        - 'flask*'
+        - 'Flask*'
+        - 'werkzeug'
+        - 'Werkzeug'
+        - 'jinja2'
+        - 'Jinja2'
+        - 'itsdangerous'
+        - 'click'
+        - 'blinker'
+
 - package-ecosystem: "npm"
   directory: "/"
   schedule:

@@ -23,6 +23,16 @@ Repository = "https://github.com/tim-s-ccs/ccs-govuk-frontend-jinja.git"
 Issues = "https://github.com/tim-s-ccs/ccs-govuk-frontend-jinja/issues"
 Changelog = "https://github.com/tim-s-ccs/ccs-govuk-frontend-jinja/CHANGELOG.md"
 
+[project.optional-dependencies]
+dev = [
+  'flake8',
+  'mypy',
+  'pytest',
+  'lxml',
+  'xmldiff',
+  'flask',
+]
+
 [tool.setuptools.dynamic]
 version = {attr = "govuk_frontend_jinja.__version__"}
 
@@ -31,3 +41,7 @@ exclude = ["node_modules*"]
 
 [tool.setuptools.package-data]
 govuk_frontend_jinja = ["**/*.html"]
+
+[tool.pytest.ini_options]
+addopts = "-p no:logging"
+testpaths = "tests"
