@@ -1,8 +1,0 @@
--e file:.
-
-flake8
-mypy
-pytest
-lxml
-xmldiff
-flask
