@@ -30,7 +30,7 @@ markupsafe==3.0.2
     #   werkzeug
 mccabe==0.7.0
     # via flake8
-mypy==1.13.0
+mypy==1.14.0
     # via ccs-govuk-frontend-jinja (pyproject.toml)
 mypy-extensions==1.0.0
     # via mypy
