@@ -6,7 +6,7 @@
 #
 blinker==1.9.0
     # via flask
-click==8.1.7
+click==8.1.8
     # via flask
 flake8==7.1.1
     # via ccs-govuk-frontend-jinja (pyproject.toml)
@@ -16,7 +16,7 @@ iniconfig==2.0.0
     # via pytest
 itsdangerous==2.2.0
     # via flask
-jinja2==3.1.4
+jinja2==3.1.5
     # via
     #   ccs-govuk-frontend-jinja (pyproject.toml)
     #   flask
