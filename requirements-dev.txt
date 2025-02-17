@@ -20,7 +20,7 @@ jinja2==3.1.5
     # via
     #   ccs-govuk-frontend-jinja (pyproject.toml)
     #   flask
-lxml==5.3.0
+lxml==5.3.1
     # via
     #   ccs-govuk-frontend-jinja (pyproject.toml)
     #   xmldiff
