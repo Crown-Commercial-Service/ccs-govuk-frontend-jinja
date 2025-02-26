@@ -31,6 +31,7 @@ dev = [
   'lxml',
   'xmldiff',
   'flask',
+  'pre-commit',
 ]
 
 [tool.setuptools.dynamic]
