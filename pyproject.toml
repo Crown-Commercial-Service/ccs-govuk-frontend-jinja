@@ -18,10 +18,10 @@ readme = "README.md"
 license = {file = "LICENSE"}
 
 [project.urls]
-Homepage = "https://github.com/tim-s-ccs/ccs-govuk-frontend-jinja"
-Repository = "https://github.com/tim-s-ccs/ccs-govuk-frontend-jinja.git"
-Issues = "https://github.com/tim-s-ccs/ccs-govuk-frontend-jinja/issues"
-Changelog = "https://github.com/tim-s-ccs/ccs-govuk-frontend-jinja/CHANGELOG.md"
+Homepage = "https://github.com/Crown-Commercial-Service/ccs-govuk-frontend-jinja"
+Repository = "https://github.com/Crown-Commercial-Service/ccs-govuk-frontend-jinja.git"
+Issues = "https://github.com/Crown-Commercial-Service/ccs-govuk-frontend-jinja/issues"
+Changelog = "https://github.com/Crown-Commercial-Service/ccs-govuk-frontend-jinja/CHANGELOG.md"
 
 [project.optional-dependencies]
 dev = [
