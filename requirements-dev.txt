@@ -20,7 +20,7 @@ flask==3.1.0
     # via ccs-govuk-frontend-jinja (pyproject.toml)
 identify==2.6.9
     # via pre-commit
-iniconfig==2.0.0
+iniconfig==2.1.0
     # via pytest
 itsdangerous==2.2.0
     # via flask
