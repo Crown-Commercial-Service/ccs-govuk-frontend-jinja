@@ -50,7 +50,7 @@ platformdirs==4.3.7
     # via virtualenv
 pluggy==1.5.0
     # via pytest
-pre-commit==4.1.0
+pre-commit==4.2.0
     # via ccs-govuk-frontend-jinja (pyproject.toml)
 pycodestyle==2.12.1
     # via flake8
