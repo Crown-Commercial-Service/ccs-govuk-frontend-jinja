@@ -146,9 +146,9 @@ def test_render_component(client, component_fixtures, component_name, fixture_na
 
 
 def test_all_jinja_templates_exist():
-    jinja_components = [component for component in get_jinja_components()]
+    jinja_components = list(get_jinja_components())
 
-    nunjucks_components = [component for component in get_nunjucks_components()]
+    nunjucks_components = list(get_nunjucks_components())
 
     assert jinja_components == nunjucks_components
 
