@@ -23,6 +23,7 @@ def create_app():
             )
         ]
     )
+    app.jinja_env.globals["govukRebrand"] = False
 
     main = Blueprint('main', __name__)
 
