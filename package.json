@@ -5,6 +5,6 @@
   "author": "CCS",
   "license": "MIT",
   "devDependencies": {
-    "govuk-frontend": "^5.10.0"
+    "govuk-frontend": "^5.10.1"
   }
 }
