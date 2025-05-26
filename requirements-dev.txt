@@ -18,7 +18,7 @@ flake8==7.2.0
     # via ccs-govuk-frontend-jinja (pyproject.toml)
 flask==3.1.1
     # via ccs-govuk-frontend-jinja (pyproject.toml)
-identify==2.6.10
+identify==2.6.12
     # via pre-commit
 iniconfig==2.1.0
     # via pytest
