@@ -59,7 +59,7 @@ pycodestyle==2.13.0
     # via flake8
 pyflakes==3.3.2
     # via flake8
-pytest==8.3.5
+pytest==8.4.0
     # via ccs-govuk-frontend-jinja (pyproject.toml)
 pyyaml==6.0.2
     # via pre-commit
