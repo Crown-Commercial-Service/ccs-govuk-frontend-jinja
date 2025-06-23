@@ -57,7 +57,7 @@ pre-commit==4.2.0
     # via ccs-govuk-frontend-jinja (pyproject.toml)
 pycodestyle==2.13.0
     # via flake8
-pyflakes==3.3.2
+pyflakes==3.4.0
     # via flake8
 pygments==2.19.2
     # via pytest
