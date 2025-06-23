@@ -14,7 +14,7 @@ distlib==0.3.9
     # via virtualenv
 filelock==3.18.0
     # via virtualenv
-flake8==7.2.0
+flake8==7.3.0
     # via ccs-govuk-frontend-jinja (pyproject.toml)
 flask==3.1.1
     # via ccs-govuk-frontend-jinja (pyproject.toml)
