@@ -55,7 +55,7 @@ pluggy==1.6.0
     # via pytest
 pre-commit==4.2.0
     # via ccs-govuk-frontend-jinja (pyproject.toml)
-pycodestyle==2.13.0
+pycodestyle==2.14.0
     # via flake8
 pyflakes==3.3.2
     # via flake8
