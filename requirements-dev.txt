@@ -12,7 +12,7 @@ click==8.2.1
     # via flask
 distlib==0.4.0
     # via virtualenv
-filelock==3.18.0
+filelock==3.19.1
     # via virtualenv
 flake8==7.3.0
     # via ccs-govuk-frontend-jinja (pyproject.toml)
