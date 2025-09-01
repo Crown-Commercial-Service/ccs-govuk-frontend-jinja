@@ -65,7 +65,7 @@ pytest==8.4.1
     # via ccs-govuk-frontend-jinja (pyproject.toml)
 pyyaml==6.0.2
     # via pre-commit
-typing-extensions==4.14.1
+typing-extensions==4.15.0
     # via mypy
 virtualenv==20.34.0
     # via pre-commit
