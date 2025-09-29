@@ -32,7 +32,7 @@ lxml==6.0.2
     # via
     #   ccs-govuk-frontend-jinja (pyproject.toml)
     #   xmldiff
-markupsafe==3.0.2
+markupsafe==3.0.3
     # via
     #   flask
     #   jinja2
