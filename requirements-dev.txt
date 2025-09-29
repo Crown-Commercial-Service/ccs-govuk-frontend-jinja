@@ -63,7 +63,7 @@ pygments==2.19.2
     # via pytest
 pytest==8.4.2
     # via ccs-govuk-frontend-jinja (pyproject.toml)
-pyyaml==6.0.2
+pyyaml==6.0.3
     # via pre-commit
 typing-extensions==4.15.0
     # via mypy
