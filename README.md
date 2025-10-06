@@ -1,10 +1,11 @@
 # CCS GOV.UK Frontend Jinja Macros
 
 [![PyPI version](https://badge.fury.io/py/ccs-govuk-frontend-jinja.svg)](https://pypi.org/project/ccs-govuk-frontend-jinja/)
-![govuk-frontend 5.4.0](https://img.shields.io/badge/govuk--frontend%20version-5.4.0-005EA5?logo=gov.uk&style=flat)
+![govuk-frontend 5.12.0](https://img.shields.io/badge/govuk--frontend%20version-5.12.0-005EA5?logo=gov.uk&style=flat)
 [![Python package](https://github.com/Crown-Commercial-Service/ccs-govuk-frontend-jinja/actions/workflows/python-package.yml/badge.svg)](https://github.com/Crown-Commercial-Service/ccs-govuk-frontend-jinja/actions/workflows/python-package.yml)
 
-**This is a fork of [GOV.UK Frontend Jinja Macros](https://github.com/LandRegistry/govuk-frontend-jinja) which has not been updated beyond GOV.UK Frontend v5.1. This is for use in the Digital Marketplace until it starts to get updated again.**
+**This is a fork of [GOV.UK Frontend Jinja Macros](https://github.com/LandRegistry/govuk-frontend-jinja) which has some issues that mean we can't use it in Digital Marketplace:**
+* [Issue 82](https://github.com/LandRegistry/govuk-frontend-jinja/issues/82)
 
 **GOV.UK Frontend Jinja is a [community tool](https://design-system.service.gov.uk/community/resources-and-tools/) of the [GOV.UK Design System](https://design-system.service.gov.uk/). The Design System team is not responsible for it and cannot support you with using it. Contact the [maintainers](#contributors) directly if you need [help](#support) or you want to request a feature.**
 
@@ -17,7 +18,7 @@ The following table shows the version of CCS GOV.UK Frontend Jinja that you shou
 
 | CCS GOV.UK Frontend Jinja Version | Target GOV.UK Frontend Version |
 | ----------------------------- | ------------------------------ |
-| [1.7.0](https://github.com/Crown-Commercial-Service/ccs-govuk-frontend-jinja/releases/tag/1.7.0) | [5.11.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.11.0) |
+| [1.7.0](https://github.com/Crown-Commercial-Service/ccs-govuk-frontend-jinja/releases/tag/1.7.0) | [5.11.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.11.0) (and later) |
 | [1.6.0](https://github.com/Crown-Commercial-Service/ccs-govuk-frontend-jinja/releases/tag/1.6.0) | [5.10.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0) |
 | [1.5.0](https://github.com/Crown-Commercial-Service/ccs-govuk-frontend-jinja/releases/tag/1.5.0) | [5.9.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.9.0) |
 | [1.3.0](https://github.com/Crown-Commercial-Service/ccs-govuk-frontend-jinja/releases/tag/1.3.0) | [5.7.1](https://github.com/alphagov/govuk-frontend/releases/tag/v5.7.1) |
