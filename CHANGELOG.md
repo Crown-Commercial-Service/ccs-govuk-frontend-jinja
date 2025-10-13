@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased](https://github.com/Crown-Commercial-Service/ccs-govuk-frontend-jinja/compare/1.5.0...main)
 
+### Added
+
+- [GOV.UK Frontend v5.13.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.12.0) support
+
 ## [1.7.0](https://github.com/Crown-Commercial-Service/ccs-govuk-frontend-jinja/releases/tag/1.7.0) - 30/06/2025
 
 ### Added
