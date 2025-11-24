@@ -8,7 +8,7 @@ blinker==1.9.0
     # via flask
 cfgv==3.4.0
     # via pre-commit
-click==8.3.0
+click==8.3.1
     # via flask
 distlib==0.4.0
     # via virtualenv
