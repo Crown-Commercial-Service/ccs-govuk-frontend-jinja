@@ -61,7 +61,7 @@ pyflakes==3.4.0
     # via flake8
 pygments==2.19.2
     # via pytest
-pytest==9.0.0
+pytest==9.0.1
     # via ccs-govuk-frontend-jinja (pyproject.toml)
 pyyaml==6.0.3
     # via pre-commit
