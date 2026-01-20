@@ -14,8 +14,6 @@ distlib==0.4.0
     # via virtualenv
 filelock==3.20.3
     # via virtualenv
-flake8==7.3.0
-    # via ccs-govuk-frontend-jinja (pyproject.toml)
 flask==3.1.2
     # via ccs-govuk-frontend-jinja (pyproject.toml)
 identify==2.6.16
@@ -39,8 +37,6 @@ markupsafe==3.0.3
     #   flask
     #   jinja2
     #   werkzeug
-mccabe==0.7.0
-    # via flake8
 mypy==1.19.1
     # via ccs-govuk-frontend-jinja (pyproject.toml)
 mypy-extensions==1.1.0
@@ -57,16 +53,14 @@ pluggy==1.6.0
     # via pytest
 pre-commit==4.5.1
     # via ccs-govuk-frontend-jinja (pyproject.toml)
-pycodestyle==2.14.0
-    # via flake8
-pyflakes==3.4.0
-    # via flake8
 pygments==2.19.2
     # via pytest
 pytest==9.0.2
     # via ccs-govuk-frontend-jinja (pyproject.toml)
 pyyaml==6.0.3
     # via pre-commit
+ruff==0.14.13
+    # via ccs-govuk-frontend-jinja (pyproject.toml)
 typing-extensions==4.15.0
     # via mypy
 virtualenv==20.36.1

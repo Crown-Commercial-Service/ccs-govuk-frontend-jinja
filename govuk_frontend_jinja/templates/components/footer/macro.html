@@ -61,6 +61,7 @@
         </div>
         {% endif %}
         {% endif %}
+        {% if params.contentLicence is not none %}
         {# The SVG needs `focusable="false"` so that Internet Explorer does not
           treat it as an interactive element - without this it will be
           'focusable' when using the keyboard to navigate. -#}
@@ -90,6 +91,7 @@
           >Open Government Licence v3.0</a>, except where otherwise stated
         {% endif %}
         </span>
+        {% endif %}
       </div>
       <div class="govuk-footer__meta-item">
         <a

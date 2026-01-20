@@ -13,23 +13,20 @@ def create_app():
         [
             PrefixLoader(
                 {
-                    "govuk_frontend_jinja": FileSystemLoader(
-                        searchpath=os.path.join(
-                            os.path.dirname(__file__),
-                            "../../govuk_frontend_jinja/templates"
-                        )
+                    'govuk_frontend_jinja': FileSystemLoader(
+                        searchpath=os.path.join(os.path.dirname(__file__), '../../govuk_frontend_jinja/templates')
                     )
                 }
             )
         ]
     )
-    app.jinja_env.globals["govukRebrand"] = False
+    app.jinja_env.globals['govukRebrand'] = False
 
     main = Blueprint('main', __name__)
 
     app.register_blueprint(main)
 
-    @app.post("/template")
+    @app.post('/template')
     def template() -> Any:
         data: Any = request.json
 
@@ -53,7 +50,7 @@ def create_app():
         # Render the full html template
         return render_template_string(template, **data)
 
-    @app.post("/component/<string:component>")
+    @app.post('/component/<string:component>')
     def component(component: str) -> Any:
         data: Any = request.get_json()
         # Render the component using the data provided
@@ -64,7 +61,7 @@ def create_app():
         return render_template_string(
             f"""
             {{% from "govuk_frontend_jinja/components/{component}/macro.html" import govuk{data['macro_name']} %}}
-            {{{{ govuk{data['macro_name']}({data["params"]}) }}}}
+            {{{{ govuk{data['macro_name']}({data['params']}) }}}}
             """
         )
 
