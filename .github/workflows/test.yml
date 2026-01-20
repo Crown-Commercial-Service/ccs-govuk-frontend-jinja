@@ -38,4 +38,4 @@ jobs:
       run: invoke requirements-dev
 
     - name: Run tests
-      run: invoke test-new
+      run: invoke test

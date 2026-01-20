@@ -11,5 +11,5 @@ def test_mypy(c):
 
 ns.add_task(npm_install)
 ns.add_task(test_mypy)
-ns['test-new'].pre.insert(-2, npm_install)
-ns['test-new'].pre.insert(-1, test_mypy)
+ns['test'].pre.insert(-2, npm_install)
+ns['test'].pre.insert(-1, test_mypy)
