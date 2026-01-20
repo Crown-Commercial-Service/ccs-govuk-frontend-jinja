@@ -39,7 +39,7 @@ def get_component_fixtures():
         for fixture in fixtures.get('fixtures'):
             component_fixtures_dict[component_name][fixture['name']] = {
                 'options': fixture.get('options', {}),
-                'html': fixture.get('html', ""),
+                'html': fixture.get('html', ''),
             }
 
     return component_fixtures_dict
@@ -70,19 +70,19 @@ def component_fixture(fixtures, component_name, fixture_name):
 
 # For help formatting the HTML to make it compareable
 REGEX_REPLACERS = [
-    (r"\s{2,}", ""),
-    (r"\n", ""),
+    (r'\s{2,}', ''),
+    (r'\n', ''),
 ]
 
 STRING_REPLACERS = [
     ('value="False"', 'value="false"'),
     ('attribute="True"', 'attribute="true"'),
-    ("inputclass", "input class"),
+    ('inputclass', 'input class'),
     ('spellcheck="True"', 'spellcheck="true"'),
     ('spellcheck="False"', 'spellcheck="false"'),
-    ("hiddendata", "hidden data"),
-    ("selecteddata", "selected data"),
-    ("divclass", "div class"),
+    ('hiddendata', 'hidden data'),
+    ('selecteddata', 'selected data'),
+    ('divclass', 'div class'),
 ]
 
 
@@ -100,7 +100,7 @@ def assert_generated_html_matches_fixture(response, component_name, fixture_name
     assert response.status_code == 200
 
     fixture_html_string = html_to_one_line(fixture_html)
-    macro_html_string = html_to_one_line(response.get_data().decode("utf-8"))
+    macro_html_string = html_to_one_line(response.get_data().decode('utf-8'))
 
     if not fixture_html_string or not macro_html_string:
         diff = fixture_html_string != macro_html_string
@@ -108,23 +108,17 @@ def assert_generated_html_matches_fixture(response, component_name, fixture_name
         fixture_document = html.fromstring(fixture_html_string)
         macro_document = html.fromstring(macro_html_string)
 
-        diff = diff_trees(
-            fixture_document,
-            macro_document
-        )
+        diff = diff_trees(fixture_document, macro_document)
 
-    assert (not diff), f"Did not match for '{component_name}' component with example: '{fixture_name}'"
+    assert not diff, f"Did not match for '{component_name}' component with example: '{fixture_name}'"
 
 
-@pytest.fixture(scope="session")
+@pytest.fixture(scope='session')
 def component_fixtures():
     return get_component_fixtures()
 
 
-@pytest.mark.parametrize(
-    "component_name, fixture_name",
-    components_fixtures()
-)
+@pytest.mark.parametrize('component_name, fixture_name', components_fixtures())
 def test_render_component(client, component_fixtures, component_name, fixture_name):
     macro_name = component_name_to_macro_name(component_name)
     fixture_options, fixture_html = component_fixture(component_fixtures, component_name, fixture_name)
@@ -132,17 +126,9 @@ def test_render_component(client, component_fixtures, component_name, fixture_na
     response = client.post(
         f'/component/{component_name}',
         content_type='application/json',
-        data=json.dumps({
-            'macro_name': macro_name,
-            'params': fixture_options
-        })
+        data=json.dumps({'macro_name': macro_name, 'params': fixture_options}),
     )
-    assert_generated_html_matches_fixture(
-        response,
-        component_name,
-        fixture_name,
-        fixture_html
-    )
+    assert_generated_html_matches_fixture(response, component_name, fixture_name, fixture_html)
 
 
 def test_all_jinja_templates_exist():
