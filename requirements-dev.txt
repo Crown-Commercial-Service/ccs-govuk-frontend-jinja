@@ -65,7 +65,7 @@ typing-extensions==4.15.0
     # via mypy
 virtualenv==21.2.0
     # via pre-commit
-werkzeug==3.1.6
+werkzeug==3.1.7
     # via flask
 xmldiff==2.7.0
     # via ccs-govuk-frontend-jinja (pyproject.toml)
