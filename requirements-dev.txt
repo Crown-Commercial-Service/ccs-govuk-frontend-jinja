@@ -8,7 +8,7 @@ blinker==1.9.0
     # via flask
 cfgv==3.5.0
     # via pre-commit
-click==8.3.1
+click==8.3.2
     # via flask
 distlib==0.4.0
     # via virtualenv
@@ -65,7 +65,7 @@ typing-extensions==4.15.0
     # via mypy
 virtualenv==21.2.0
     # via pre-commit
-werkzeug==3.1.7
+werkzeug==3.1.8
     # via flask
 xmldiff==2.7.0
     # via ccs-govuk-frontend-jinja (pyproject.toml)
