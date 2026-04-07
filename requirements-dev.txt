@@ -37,7 +37,7 @@ markupsafe==3.0.3
     #   flask
     #   jinja2
     #   werkzeug
-mypy==1.19.1
+mypy==1.20.0
     # via ccs-govuk-frontend-jinja (pyproject.toml)
 mypy-extensions==1.1.0
     # via mypy
