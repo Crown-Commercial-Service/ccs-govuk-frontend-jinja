@@ -47,7 +47,7 @@ packaging==26.2
     # via pytest
 pathspec==1.1.1
     # via mypy
-platformdirs==4.9.6
+platformdirs==4.10.0
     # via virtualenv
 pluggy==1.6.0
     # via pytest
