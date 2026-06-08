@@ -10,7 +10,7 @@ cfgv==3.5.0
     # via pre-commit
 click==8.4.1
     # via flask
-distlib==0.4.0
+distlib==0.4.1
     # via virtualenv
 filelock==3.29.0
     # via virtualenv
