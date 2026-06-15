@@ -67,7 +67,7 @@ virtualenv==21.5.0
     # via pre-commit
 werkzeug==3.1.8
     # via flask
-xmldiff==2.7.0
+xmldiff==3.0
     # via ccs-govuk-frontend-jinja (pyproject.toml)
 
 # The following packages are considered to be unsafe in a requirements file:
